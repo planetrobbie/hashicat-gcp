@@ -46,6 +46,10 @@ resource "google_compute_instance" "hashicat" {
     }
   }
 
+  labels {
+    department = "devops"
+  }
+
   network_interface {
     subnetwork = google_compute_subnetwork.hashicat.self_link
     access_config {
